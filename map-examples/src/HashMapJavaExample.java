@@ -49,5 +49,11 @@ public class HashMapJavaExample {
 
         Iterator<String> iterator = myPhoneBook.keySet().iterator();
         //iterator is a pointer that will iterate over set elements.
+
+        System.out.println("----------Iterator----------");
+
+        while (iterator.hasNext()){
+            System.out.println("key = " + iterator.next());
+        }
     }
 }
