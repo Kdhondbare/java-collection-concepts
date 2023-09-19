@@ -43,7 +43,7 @@ public class HashMapJavaExample {
         System.out.println("----------Entries----------");
 
         for (Map.Entry<String, Long> entry : myPhoneBook.entrySet()){
-            System.out.println("K = " + entry.getKey() + "V = " + entry.getValue());
+            System.out.println("K = " + entry.getKey() + ", V = " + entry.getValue());
         }
         System.out.println("--------------------");
 
