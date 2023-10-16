@@ -28,6 +28,9 @@ public class HashSetExample {
             System.out.println("Name : " + fruitName);
         }
         System.out.println("-----------------------");
+        fruitsNames.forEach(item -> System.out.println("item"));
+        System.out.println("-----------------------");
         System.out.println("size : " + fruitsNames.size());
+        System.out.println("-----------------------");
     }
 }

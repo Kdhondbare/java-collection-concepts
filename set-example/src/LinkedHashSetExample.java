@@ -30,5 +30,6 @@ public class LinkedHashSetExample {
         }
         System.out.println("-----------------------");
         System.out.println("size : " + fruitsNames.size());
+        System.out.println("-----------------------");
     }
 }
