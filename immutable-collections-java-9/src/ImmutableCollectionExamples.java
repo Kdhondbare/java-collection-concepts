@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
@@ -83,5 +84,44 @@ public class ImmutableCollectionExamples {
                 new Employee("Karan", 100, 110000),
                 new Employee("Moin", 500, 300000)
         );
+
+        System.out.println(immutableList);
+        vikramEmp.id = 200;//this is allowed because of Employee class is not immutable.
+        System.out.println(immutableList);
+//                immutableList.set(1, new Employee("Pratik",302,230000)); //replace is not allowed
+//                immutableList.remove(0);//adding or removing is not allowed on immutable list
+//                immutableList.add(new Employee("Pratik",200,120000));//adding or removing is not allowed on immutable list
+
+       //Example of Array.asList()
+
+       Employee[] employees = new Employee[]{vikramEmp,
+               new Employee("Karan", 100, 120000),
+               new Employee("Pratik", 100, 110000),
+               new Employee("Moin", 500, 300000)};
+
+       List<Employee> employeeList1 = Arrays.asList(employees);//this returns list backed by each other
+       //array changes are visible in the list
+       //also list changes are visible in the array
+       for (int i=0; i<employees.length; i++) {
+           System.out.print(" " + employees[i].name);
+       }
+        System.out.println();
+        System.out.println("employeeList1 list : " + employeeList1);
+        employees[0].name = "Vivek";
+
+        for (int i=0; i<employees.length; i++) {
+            System.out.print(" "+ employees[i].name);
+        }
+        System.out.println();
+        System.out.println("employeeList1 list : " + employeeList1);
+//        employeeList1.add(1, "Moin"); this s not allowed because array size is static and cannot updated.
+//        employeeList1.remove(1); // not allowed
+        employeeList1.set(0, new Employee("Bhagyashree", 1,100000));
+        for (int i=0; i<employees.length; i++) {
+            System.out.print(" " + employees[i].name);
+        }
+        System.out.println();
+        System.out.println("String list : " + employeeList1);
+
     }
 }
